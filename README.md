@@ -1,16 +1,25 @@
->Data iOS Sample
->====
->A simple example application demonstrating our data system.
+Pivotal Mobile Services Suite Data SDK Sample for iOS
+=====================================================
 
-Features
----
-- Simple example code for registering to an MSS data service
-- Logging display for data objects can be easily extracted for development work.
+The Data SDK requires iOS 6.0 or greater.
 
-Device Requirements
----
-- Nothing additional to the [framework](http://github.com/cfmobile/data-ios) requirements.
+Data SDK Usage
+--------------
 
-Building
----
-- The most recent version of Xcode and the [cocoapods](http://cocoapods.org/) dependancy system. The AFNetworking and AFOauth2Client libraries are dependancies that will be fulfilled by cocoapods.
+For more information please visit the [docs site](https://github.com/cfmobile/docs-datasync-ios)
+
+
+Application Requirements
+------------------------
+
+The most recent version of Xcode and the [CocoaPods](http://cocoapods.org/) dependency system.
+
+
+Sample Application
+------------------
+
+There is a small sample application included in this repository to demonstrate and exercise the features in the Data Client SDK.
+
+You can use this sample application to test authorization using an OpenID Connect enabled identity server and the Pivotal Mobile Services Suite back-end server for data storage. You are able to define an MSSDataObject name and id and store and retrieve key-value data to the backend server for a given user.
+
+Watch the log output in the sample application's display to see what the Data library is doing in the background. This log output should also be visible in the iOS device console (for debug builds), but the sample application registers a "listener" with the Data Library's logger so it can show you what's going on.
