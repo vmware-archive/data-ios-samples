@@ -1,9 +1,5 @@
 //
-//  ShowJSONViewController.m
-//  DataSample
-//
-//  Created by Elliott Garcea on 2014-06-11.
-//  Copyright (c) 2014 Pivotal. All rights reserved.
+//  Copyright (C) 2014 Pivotal Software, Inc. All rights reserved.
 //
 
 #import "ShowJSONViewController.h"
