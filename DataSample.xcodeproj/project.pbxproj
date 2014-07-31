@@ -12,11 +12,11 @@
 		75DC65F8197071310014A88D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75DC65EC197071310014A88D /* InfoPlist.strings */; };
 		75DC65F9197071310014A88D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DC65EE197071310014A88D /* Images.xcassets */; };
 		75DC65FA197071310014A88D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DC65EF197071310014A88D /* main.m */; };
+		E767A453198AC6EA001903DE /* MSSData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E767A452198AC6EA001903DE /* MSSData.framework */; };
 		E76B939A1976D0D1003F37FA /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B93951976D0D1003F37FA /* DataTableViewController.m */; };
 		E76B939B1976D0D1003F37FA /* ShowJSONViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B93971976D0D1003F37FA /* ShowJSONViewController.m */; };
 		E76B939C1976D0D1003F37FA /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B93991976D0D1003F37FA /* SignInViewController.m */; };
 		E76B939D1976D161003F37FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75DC65E6197071310014A88D /* Main.storyboard */; };
-		E76B9508197833A3003F37FA /* MSSData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76B9507197833A3003F37FA /* MSSData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,13 +28,13 @@
 		75DC65ED197071310014A88D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75DC65EE197071310014A88D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		75DC65EF197071310014A88D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E767A452198AC6EA001903DE /* MSSData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSSData.framework; sourceTree = "<group>"; };
 		E76B93941976D0D1003F37FA /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
 		E76B93951976D0D1003F37FA /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
 		E76B93961976D0D1003F37FA /* ShowJSONViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowJSONViewController.h; sourceTree = "<group>"; };
 		E76B93971976D0D1003F37FA /* ShowJSONViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowJSONViewController.m; sourceTree = "<group>"; };
 		E76B93981976D0D1003F37FA /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		E76B93991976D0D1003F37FA /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		E76B9507197833A3003F37FA /* MSSData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSSData.framework; sourceTree = "<group>"; };
 		F1B601B71925257200B65371 /* DataSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76B9508197833A3003F37FA /* MSSData.framework in Frameworks */,
+				E767A453198AC6EA001903DE /* MSSData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 		F1B601AE1925257200B65371 = {
 			isa = PBXGroup;
 			children = (
-				E76B9507197833A3003F37FA /* MSSData.framework */,
+				E767A452198AC6EA001903DE /* MSSData.framework */,
 				75DC65E3197071310014A88D /* DataSample */,
 				F1B601B81925257200B65371 /* Products */,
 				3DFBFBA335484D039ADA1160 /* Frameworks */,
