@@ -12,7 +12,7 @@
 		75DC65F8197071310014A88D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75DC65EC197071310014A88D /* InfoPlist.strings */; };
 		75DC65F9197071310014A88D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DC65EE197071310014A88D /* Images.xcassets */; };
 		75DC65FA197071310014A88D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DC65EF197071310014A88D /* main.m */; };
-		E767A453198AC6EA001903DE /* MSSData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E767A452198AC6EA001903DE /* MSSData.framework */; };
+		D31C056F4B704020BAD1BD02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7ACB8BB6C54F10B8CE31B4 /* libPods.a */; };
 		E76B939A1976D0D1003F37FA /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B93951976D0D1003F37FA /* DataTableViewController.m */; };
 		E76B939B1976D0D1003F37FA /* ShowJSONViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B93971976D0D1003F37FA /* ShowJSONViewController.m */; };
 		E76B939C1976D0D1003F37FA /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76B93991976D0D1003F37FA /* SignInViewController.m */; };
@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35B7C6BA03CD48D88D550D25 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		75DC65E4197071310014A88D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75DC65E5197071310014A88D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		75DC65E7197071310014A88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,7 +29,7 @@
 		75DC65ED197071310014A88D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75DC65EE197071310014A88D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		75DC65EF197071310014A88D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E767A452198AC6EA001903DE /* MSSData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSSData.framework; sourceTree = "<group>"; };
+		AC7ACB8BB6C54F10B8CE31B4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76B93941976D0D1003F37FA /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
 		E76B93951976D0D1003F37FA /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
 		E76B93961976D0D1003F37FA /* ShowJSONViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowJSONViewController.h; sourceTree = "<group>"; };
@@ -43,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E767A453198AC6EA001903DE /* MSSData.framework in Frameworks */,
+				D31C056F4B704020BAD1BD02 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +54,7 @@
 		3DFBFBA335484D039ADA1160 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC7ACB8BB6C54F10B8CE31B4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,10 +91,10 @@
 		F1B601AE1925257200B65371 = {
 			isa = PBXGroup;
 			children = (
-				E767A452198AC6EA001903DE /* MSSData.framework */,
 				75DC65E3197071310014A88D /* DataSample */,
 				F1B601B81925257200B65371 /* Products */,
 				3DFBFBA335484D039ADA1160 /* Frameworks */,
+				35B7C6BA03CD48D88D550D25 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1B601E91925257200B65371 /* Build configuration list for PBXNativeTarget "DataSample" */;
 			buildPhases = (
+				67D0FC1BCF4B40E5AF859A9E /* Check Pods Manifest.lock */,
 				F1B601B31925257200B65371 /* Sources */,
 				F1B601B41925257200B65371 /* Frameworks */,
 				F1B601B51925257200B65371 /* Resources */,
+				FAF5A51F670B4A8C8E1DCD74 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +169,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67D0FC1BCF4B40E5AF859A9E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FAF5A51F670B4A8C8E1DCD74 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1B601B31925257200B65371 /* Sources */ = {
@@ -273,6 +310,7 @@
 		};
 		F1B601EA1925257200B65371 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B7C6BA03CD48D88D550D25 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -291,6 +329,7 @@
 		};
 		F1B601EB1925257200B65371 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B7C6BA03CD48D88D550D25 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

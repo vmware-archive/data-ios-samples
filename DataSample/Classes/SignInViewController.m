@@ -46,7 +46,7 @@ static NSString *const kClientSecret = @"006d0cea91f01a82cdc57afafbbc0d26c832896
     [[MSSDataSignIn sharedInstance] signOut];
 }
 
-- (void)finishedWithAuth:(AFOAuthCredential *)auth
+- (void)finishedWithAuth:(MSSAFOAuthCredential *)auth
                    error:(NSError *)error
 {
     if (error) {
