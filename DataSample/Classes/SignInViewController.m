@@ -6,8 +6,8 @@
 
 #import "SignInViewController.h"
 
-static NSString *const kOAuthServerURL = @"http://ident.one.pepsi.cf-app.com";
-static NSString *const kDataServiceURL = @"http://data-service.one.pepsi.cf-app.com";
+static NSString *const kOAuthServerURL = @"http://datasync-authentication.demo.vchs.cfms-apps.com";
+static NSString *const kDataServiceURL = @"http://datasync-datastore.demo.vchs.cfms-apps.com";
 
 static NSString *const kClientID = @"ios-client";
 static NSString *const kClientSecret = @"006d0cea91f01a82cdc57afafbbc0d26c8328964029d5b5eae920e2fdc703169";
@@ -43,7 +43,7 @@ static NSString *const kClientSecret = @"006d0cea91f01a82cdc57afafbbc0d26c832896
 }
 
 - (IBAction)signOutClicked:(id)sender {
-    [[MSSDataSignIn sharedInstance] signOut];
+    [[MSSDataSignIn sharedInstance] disconnect];
 }
 
 - (void)finishedWithAuth:(MSSAFOAuthCredential *)auth
@@ -57,6 +57,14 @@ static NSString *const kClientSecret = @"006d0cea91f01a82cdc57afafbbc0d26c832896
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"DataTableViewController"];
         [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+
+- (void)didDisconnectWithError:(NSError *)error
+{
+    if (error) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log Out Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 

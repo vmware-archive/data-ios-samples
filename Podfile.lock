@@ -1,14 +1,10 @@
 PODS:
-  - MSSData (1.0.0)
+  - MSSData (1.0.2)
 
 DEPENDENCIES:
-  - MSSData (from `../data-ios`)
-
-EXTERNAL SOURCES:
-  MSSData:
-    :path: ../data-ios
+  - MSSData (~> 1.0.2)
 
 SPEC CHECKSUMS:
-  MSSData: aeaf8be3ab42093dc54c8a513a8e8f686e67977f
+  MSSData: be0c987863e2bdc633a22d8a8a9ecc82a197d1a7
 
 COCOAPODS: 0.33.1

@@ -2,6 +2,7 @@
 //  Copyright (C) 2014 Pivotal Software, Inc. All rights reserved.
 //
 
+#import <MSSData/MSSDataSignIn.h>
 #import <MSSData/MSSDataObject.h>
 
 #import "DataTableViewController.h"
@@ -82,9 +83,6 @@
 
 @property (nonatomic) MSSDataObject *syncObject;
 @property NSMutableArray *keyValuePairsArray;
-
-
-@property (strong, nonatomic) IBOutletCollection(UIBarButtonItem) NSArray *barButtonCollection;
 
 @end
 
@@ -186,6 +184,44 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
+- (IBAction)actionSheetClicked:(id)sender
+{
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Select action:"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:@"Unload Object", @"Edit Items", @"Delete Object", @"Log Out", nil];
+    popup.tag = 1;
+    [popup showInView:[UIApplication sharedApplication].keyWindow];
+}
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (popup.tag) {
+        case 1: {
+            switch (buttonIndex) {
+                case 0:
+                    [self unloadButtonClicked];
+                    break;
+                case 1:
+                    [self editButtonClicked];
+                    break;
+                case 2:
+                    [self deleteButtonClicked];
+                    break;
+                case 3:
+                    [self logoutButtonClicked];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
+
 - (IBAction)fetchButtonClicked:(id)sender
 {
     if (self.syncObject && [self.keyValuePairsArray[0] objectID]) {
@@ -251,12 +287,22 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     [sender resignFirstResponder];
 }
 
-- (IBAction)deleteButtonClicked:(id)sender
+- (void)unloadButtonClicked
+{
+    self.syncObject = nil;
+    self.keyValuePairsArray = [NSMutableArray arrayWithObject:[ArrayObject objectWithCollectionName:@"objects" objectID:@"1234"]];
+    [self populateSyncObject];
+    [self.tableView reloadData];
+}
+
+- (void)deleteButtonClicked
 {
     self.syncObject.objectID = [self.keyValuePairsArray[0] objectID];
     
     if ([self.keyValuePairsArray[0] objectID]) {
         [self.syncObject deleteOnSuccess:^(MSSDataObject *object){
+            UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Object Deleted" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [view show];
             [self resetKeyValuePairsArray];
             [self.tableView reloadData];
             
@@ -267,15 +313,15 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-- (IBAction)editButtonClicked:(id)sender
+- (void)editButtonClicked
 {
     self.tableView.editing = !self.tableView.editing;
-    
-    [self.barButtonCollection enumerateObjectsUsingBlock:^(UIBarButtonItem *item, NSUInteger idx, BOOL *stop) {
-        if (item != sender) {
-            item.enabled = !self.tableView.editing;
-        }
-    }];
+}
+
+- (void)logoutButtonClicked
+{
+    [[MSSDataSignIn sharedInstance] disconnect];
+    [self.navigationController popToRootViewControllerAnimated:TRUE];
 }
 
 - (void)populateSyncObject

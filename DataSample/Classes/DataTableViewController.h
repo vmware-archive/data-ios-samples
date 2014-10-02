@@ -4,6 +4,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataTableViewController : UITableViewController
+@interface DataTableViewController : UITableViewController<UIActionSheetDelegate>
 
 @end
