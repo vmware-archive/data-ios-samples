@@ -1,10 +1,10 @@
 PODS:
-  - MSSData (1.0.2)
+  - MSSData (1.0.3)
 
 DEPENDENCIES:
-  - MSSData (~> 1.0.2)
+  - MSSData (~> 1.0.3)
 
 SPEC CHECKSUMS:
-  MSSData: be0c987863e2bdc633a22d8a8a9ecc82a197d1a7
+  MSSData: bd96f2dc8485bda1e5378f52ffc7cf5665d64862
 
 COCOAPODS: 0.33.1
