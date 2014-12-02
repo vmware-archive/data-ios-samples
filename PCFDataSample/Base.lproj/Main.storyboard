@@ -36,6 +36,9 @@
                                 <state key="normal" title="Delete Object">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteObject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTR-fv-Mde"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vps-k4-Jm5">
                                 <rect key="frame" x="146" y="252" width="308" height="30"/>
