@@ -1,0 +1,6 @@
+framework module PCFData {
+  umbrella header "PCFData.h"
+
+  export *
+  module * { export * }
+}
