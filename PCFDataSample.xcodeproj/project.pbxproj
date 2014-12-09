@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11765AE1A36419700EF6B01 /* Pivotal.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11765AD1A36419700EF6B01 /* Pivotal.plist */; };
+		E11765C01A37789D00EF6B01 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11765BE1A37788F00EF6B01 /* PCFData.framework */; };
+		E11765C11A37789D00EF6B01 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E11765BE1A37788F00EF6B01 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E12CCFF61A28E44600EFC209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF51A28E44600EFC209 /* main.m */; };
 		E12CCFF91A28E44600EFC209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF81A28E44600EFC209 /* AppDelegate.m */; };
 		E12CCFFC1A28E44600EFC209 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFFB1A28E44600EFC209 /* ViewController.m */; };
@@ -14,8 +17,6 @@
 		E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0001A28E44600EFC209 /* Images.xcassets */; };
 		E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0021A28E44600EFC209 /* LaunchScreen.xib */; };
 		E12CD0101A28E44600EFC209 /* PCFDataSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */; };
-		E1ED42C11A2E5FC500D9EF18 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED42BF1A2E5FB900D9EF18 /* PCFData.framework */; };
-		E1ED42C21A2E5FC500D9EF18 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED42BF1A2E5FB900D9EF18 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E12CD03D1A2E367700EFC209 /* Embed Frameworks */ = {
+		E11765A51A360D0F00EF6B01 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E1ED42C21A2E5FC500D9EF18 /* PCFData.framework in Embed Frameworks */,
+				E11765C11A37789D00EF6B01 /* PCFData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E11765AD1A36419700EF6B01 /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pivotal.plist; sourceTree = "<group>"; };
+		E11765BE1A37788F00EF6B01 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PCFData.framework; path = PCFDataSample/PCFData.framework; sourceTree = "<group>"; };
 		E12CCFF01A28E44600EFC209 /* PCFDataSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCFDataSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CCFF41A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CCFF51A28E44600EFC209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,7 +59,6 @@
 		E12CD0091A28E44600EFC209 /* PCFDataSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCFDataSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CD00E1A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCFDataSampleTests.m; sourceTree = "<group>"; };
-		E1ED42BF1A2E5FB900D9EF18 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1ED42C11A2E5FC500D9EF18 /* PCFData.framework in Frameworks */,
+				E11765C01A37789D00EF6B01 /* PCFData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +83,7 @@
 		E12CCFE71A28E44600EFC209 = {
 			isa = PBXGroup;
 			children = (
-				E1ED42BF1A2E5FB900D9EF18 /* PCFData.framework */,
+				E11765BE1A37788F00EF6B01 /* PCFData.framework */,
 				E12CCFF21A28E44600EFC209 /* PCFDataSample */,
 				E12CD00C1A28E44600EFC209 /* PCFDataSampleTests */,
 				E12CCFF11A28E44600EFC209 /* Products */,
@@ -106,8 +108,8 @@
 				E12CCFFA1A28E44600EFC209 /* ViewController.h */,
 				E12CCFFB1A28E44600EFC209 /* ViewController.m */,
 				E12CCFFD1A28E44600EFC209 /* Main.storyboard */,
-				E12CD0001A28E44600EFC209 /* Images.xcassets */,
 				E12CD0021A28E44600EFC209 /* LaunchScreen.xib */,
+				E12CD0001A28E44600EFC209 /* Images.xcassets */,
 			);
 			path = PCFDataSample;
 			sourceTree = "<group>";
@@ -115,6 +117,7 @@
 		E12CCFF31A28E44600EFC209 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E11765AD1A36419700EF6B01 /* Pivotal.plist */,
 				E12CCFF41A28E44600EFC209 /* Info.plist */,
 				E12CCFF51A28E44600EFC209 /* main.m */,
 			);
@@ -148,7 +151,7 @@
 				E12CCFEC1A28E44600EFC209 /* Sources */,
 				E12CCFED1A28E44600EFC209 /* Frameworks */,
 				E12CCFEE1A28E44600EFC209 /* Resources */,
-				E12CD03D1A2E367700EFC209 /* Embed Frameworks */,
+				E11765A51A360D0F00EF6B01 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +192,11 @@
 					E12CCFEF1A28E44600EFC209 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = DB2ELL349P;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E12CD0081A28E44600EFC209 = {
 						CreatedOnToolsVersion = 6.1;
@@ -222,6 +230,7 @@
 			files = (
 				E12CCFFF1A28E44600EFC209 /* Main.storyboard in Resources */,
 				E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */,
+				E11765AE1A36419700EF6B01 /* Pivotal.plist in Resources */,
 				E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +380,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/PCFDataSample",
 				);
 				INFOPLIST_FILE = PCFDataSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -389,6 +399,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/PCFDataSample",
 				);
 				INFOPLIST_FILE = PCFDataSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

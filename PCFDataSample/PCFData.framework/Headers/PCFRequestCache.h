@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class PCFPendingRequest, PCFOfflineStore;
+@class PCFPendingRequest, PCFOfflineStore, PCFLocalStore, PCFResponse;
 
 @interface PCFRequestCache : NSObject
 
@@ -17,7 +17,9 @@
 
 + (PCFRequestCache *)sharedInstance;
 
-+ (PCFRequestCache *)sharedInstanceWithDefaults:(NSUserDefaults *)defaults;
+- (PCFOfflineStore *)createOfflineStoreWithCollection:(NSString *)collection;
+
+- (PCFLocalStore *)createLocalStoreWithCollection:(NSString *)collection;
 
 - (void)queueGetWithToken:(NSString *)accessToken collection:(NSString *)collection key:(NSString *)key;
 
@@ -27,18 +29,21 @@
 
 - (void)queuePendingRequest:(PCFPendingRequest *)request;
 
-- (void)retrieveAndExecutePendingRequestsWithToken:(NSString *)accessToken completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+- (void)executePendingRequestsWithToken:(NSString *)accessToken completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
 
-- (void)executePendingRequestsWithToken:(NSString *)accessToken requests:(NSMutableArray *)requests;
-
-- (PCFOfflineStore *)createOfflineStoreWithCollection:(NSString *)collection;
+- (void)executePendingRequestsWithToken:(NSString *)accessToken requests:(NSArray *)requests;
 
 @end
-
 
 @interface PCFPendingRequest : NSObject
 
 @property NSDictionary *values;
+@property (readonly) int method;
+@property (readonly) NSString *key;
+@property (readonly) NSString *value;
+@property (readonly) NSString *collection;
+@property (readonly) NSString *fallback;
+@property (readonly) NSString *accessToken;
 
 - (instancetype)initWithDictionary:(NSDictionary *)values;
 

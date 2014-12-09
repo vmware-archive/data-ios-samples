@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/PCFConfig.h</key>
+		<data>
+		mZbwvILEJ5de7K9xLJMUjlezcTY=
+		</data>
 		<key>Headers/PCFData.h</key>
 		<data>
-		bkKLZNbSsPDdnVcemCINnE18csk=
+		aNNKdodTJc8+PH6bPUsID2pAPDw=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
@@ -16,17 +20,21 @@
 		<data>
 		TVi5dhh4Gh3MmiTWDcspEqgd78s=
 		</data>
+		<key>Headers/PCFEtagStore.h</key>
+		<data>
+		b+jlLK52AaqIkCuVZqmSe53l/wE=
+		</data>
 		<key>Headers/PCFLocalStore.h</key>
 		<data>
 		YZi2BTDxPwIavQpTAMPxyaVZDAo=
 		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
-		UxyTNbtoGOMAh/oYKhBhLNkhyBE=
+		U6HCm4llFSV+1kMXBkVXR8k7Ias=
 		</data>
 		<key>Headers/PCFRemoteClient.h</key>
 		<data>
-		j6DF/DJdT2ZfxTVBzwB0jqwLInA=
+		SWKjVjDyG8C7U/R5XKppS79Gn4s=
 		</data>
 		<key>Headers/PCFRemoteStore.h</key>
 		<data>
@@ -34,7 +42,7 @@
 		</data>
 		<key>Headers/PCFRequestCache.h</key>
 		<data>
-		jpaRJvhTN9sZ4WDyaWUfzk7M1DI=
+		DXOO/7W5jnEvCuSwJstpqbj7vcc=
 		</data>
 		<key>Headers/PCFResponse.h</key>
 		<data>
@@ -51,9 +59,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/PCFConfig.h</key>
+		<data>
+		mZbwvILEJ5de7K9xLJMUjlezcTY=
+		</data>
 		<key>Headers/PCFData.h</key>
 		<data>
-		bkKLZNbSsPDdnVcemCINnE18csk=
+		aNNKdodTJc8+PH6bPUsID2pAPDw=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
@@ -63,17 +75,21 @@
 		<data>
 		TVi5dhh4Gh3MmiTWDcspEqgd78s=
 		</data>
+		<key>Headers/PCFEtagStore.h</key>
+		<data>
+		b+jlLK52AaqIkCuVZqmSe53l/wE=
+		</data>
 		<key>Headers/PCFLocalStore.h</key>
 		<data>
 		YZi2BTDxPwIavQpTAMPxyaVZDAo=
 		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
-		UxyTNbtoGOMAh/oYKhBhLNkhyBE=
+		U6HCm4llFSV+1kMXBkVXR8k7Ias=
 		</data>
 		<key>Headers/PCFRemoteClient.h</key>
 		<data>
-		j6DF/DJdT2ZfxTVBzwB0jqwLInA=
+		SWKjVjDyG8C7U/R5XKppS79Gn4s=
 		</data>
 		<key>Headers/PCFRemoteStore.h</key>
 		<data>
@@ -81,7 +97,7 @@
 		</data>
 		<key>Headers/PCFRequestCache.h</key>
 		<data>
-		jpaRJvhTN9sZ4WDyaWUfzk7M1DI=
+		DXOO/7W5jnEvCuSwJstpqbj7vcc=
 		</data>
 		<key>Headers/PCFResponse.h</key>
 		<data>

@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property IBOutlet UITextView *errorLabel;
 @property IBOutlet UITextField *textField;
 
 @end
