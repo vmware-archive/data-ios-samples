@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 + (void)load {
-    //[PCFLogger setDebug:true];
+    [PCFLogger setDebug:true];
 }
 
 
