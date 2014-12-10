@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PCFData.h</key>
 		<data>
-		aNNKdodTJc8+PH6bPUsID2pAPDw=
+		CLL7+z33Sf/YL43Orrq1Rfs+TQM=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
@@ -28,6 +28,10 @@
 		<data>
 		YZi2BTDxPwIavQpTAMPxyaVZDAo=
 		</data>
+		<key>Headers/PCFLogger.h</key>
+		<data>
+		cHer9xvj1ybMdnhvA+MQgXmpTbc=
+		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
 		U6HCm4llFSV+1kMXBkVXR8k7Ias=
@@ -42,7 +46,7 @@
 		</data>
 		<key>Headers/PCFRequestCache.h</key>
 		<data>
-		DXOO/7W5jnEvCuSwJstpqbj7vcc=
+		YTu7/i27PoDUyzNYmXrLzThxnuw=
 		</data>
 		<key>Headers/PCFResponse.h</key>
 		<data>
@@ -65,7 +69,7 @@
 		</data>
 		<key>Headers/PCFData.h</key>
 		<data>
-		aNNKdodTJc8+PH6bPUsID2pAPDw=
+		CLL7+z33Sf/YL43Orrq1Rfs+TQM=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
@@ -83,6 +87,10 @@
 		<data>
 		YZi2BTDxPwIavQpTAMPxyaVZDAo=
 		</data>
+		<key>Headers/PCFLogger.h</key>
+		<data>
+		cHer9xvj1ybMdnhvA+MQgXmpTbc=
+		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
 		U6HCm4llFSV+1kMXBkVXR8k7Ias=
@@ -97,7 +105,7 @@
 		</data>
 		<key>Headers/PCFRequestCache.h</key>
 		<data>
-		DXOO/7W5jnEvCuSwJstpqbj7vcc=
+		YTu7/i27PoDUyzNYmXrLzThxnuw=
 		</data>
 		<key>Headers/PCFResponse.h</key>
 		<data>

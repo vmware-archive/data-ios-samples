@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E11765AE1A36419700EF6B01 /* Pivotal.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11765AD1A36419700EF6B01 /* Pivotal.plist */; };
-		E11765C01A37789D00EF6B01 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11765BE1A37788F00EF6B01 /* PCFData.framework */; };
-		E11765C11A37789D00EF6B01 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E11765BE1A37788F00EF6B01 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E117661C1A38E3A500EF6B01 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E117661A1A38E39E00EF6B01 /* PCFData.framework */; };
+		E117661D1A38E3A500EF6B01 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E117661A1A38E39E00EF6B01 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E12CCFF61A28E44600EFC209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF51A28E44600EFC209 /* main.m */; };
 		E12CCFF91A28E44600EFC209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF81A28E44600EFC209 /* AppDelegate.m */; };
 		E12CCFFC1A28E44600EFC209 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFFB1A28E44600EFC209 /* ViewController.m */; };
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E11765C11A37789D00EF6B01 /* PCFData.framework in Embed Frameworks */,
+				E117661D1A38E3A500EF6B01 /* PCFData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		E11765AD1A36419700EF6B01 /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pivotal.plist; sourceTree = "<group>"; };
-		E11765BE1A37788F00EF6B01 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PCFData.framework; path = PCFDataSample/PCFData.framework; sourceTree = "<group>"; };
+		E117661A1A38E39E00EF6B01 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
 		E12CCFF01A28E44600EFC209 /* PCFDataSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCFDataSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CCFF41A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CCFF51A28E44600EFC209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E11765C01A37789D00EF6B01 /* PCFData.framework in Frameworks */,
+				E117661C1A38E3A500EF6B01 /* PCFData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		E12CCFE71A28E44600EFC209 = {
 			isa = PBXGroup;
 			children = (
-				E11765BE1A37788F00EF6B01 /* PCFData.framework */,
+				E117661A1A38E39E00EF6B01 /* PCFData.framework */,
 				E12CCFF21A28E44600EFC209 /* PCFDataSample */,
 				E12CD00C1A28E44600EFC209 /* PCFDataSampleTests */,
 				E12CCFF11A28E44600EFC209 /* Products */,
