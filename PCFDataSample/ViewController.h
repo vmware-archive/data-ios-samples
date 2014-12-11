@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class PCFDataObject;
+
 @interface ViewController : UIViewController
+
+@property PCFDataObject *object;
 
 @property IBOutlet UITextView *errorLabel;
 @property IBOutlet UITextField *textField;

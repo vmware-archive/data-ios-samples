@@ -4,25 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/PCFConfig.h</key>
-		<data>
-		mZbwvILEJ5de7K9xLJMUjlezcTY=
-		</data>
 		<key>Headers/PCFData.h</key>
 		<data>
-		CLL7+z33Sf/YL43Orrq1Rfs+TQM=
+		3NPeXKVVX5fnhJV9dwQTUNIagWI=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
-		mGY8hM3FaaGVH5BbzshGuoFDnX8=
+		pAER+KTiPiPRL6VstC2kRfSoZqE=
 		</data>
 		<key>Headers/PCFDataStore.h</key>
 		<data>
 		TVi5dhh4Gh3MmiTWDcspEqgd78s=
-		</data>
-		<key>Headers/PCFEtagStore.h</key>
-		<data>
-		b+jlLK52AaqIkCuVZqmSe53l/wE=
 		</data>
 		<key>Headers/PCFLocalStore.h</key>
 		<data>
@@ -30,15 +22,11 @@
 		</data>
 		<key>Headers/PCFLogger.h</key>
 		<data>
-		cHer9xvj1ybMdnhvA+MQgXmpTbc=
+		Ma1WE77fUp5rl5/TvYBBqAwreKg=
 		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
 		U6HCm4llFSV+1kMXBkVXR8k7Ias=
-		</data>
-		<key>Headers/PCFRemoteClient.h</key>
-		<data>
-		SWKjVjDyG8C7U/R5XKppS79Gn4s=
 		</data>
 		<key>Headers/PCFRemoteStore.h</key>
 		<data>
@@ -63,25 +51,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/PCFConfig.h</key>
-		<data>
-		mZbwvILEJ5de7K9xLJMUjlezcTY=
-		</data>
 		<key>Headers/PCFData.h</key>
 		<data>
-		CLL7+z33Sf/YL43Orrq1Rfs+TQM=
+		3NPeXKVVX5fnhJV9dwQTUNIagWI=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
-		mGY8hM3FaaGVH5BbzshGuoFDnX8=
+		pAER+KTiPiPRL6VstC2kRfSoZqE=
 		</data>
 		<key>Headers/PCFDataStore.h</key>
 		<data>
 		TVi5dhh4Gh3MmiTWDcspEqgd78s=
-		</data>
-		<key>Headers/PCFEtagStore.h</key>
-		<data>
-		b+jlLK52AaqIkCuVZqmSe53l/wE=
 		</data>
 		<key>Headers/PCFLocalStore.h</key>
 		<data>
@@ -89,15 +69,11 @@
 		</data>
 		<key>Headers/PCFLogger.h</key>
 		<data>
-		cHer9xvj1ybMdnhvA+MQgXmpTbc=
+		Ma1WE77fUp5rl5/TvYBBqAwreKg=
 		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
 		U6HCm4llFSV+1kMXBkVXR8k7Ias=
-		</data>
-		<key>Headers/PCFRemoteClient.h</key>
-		<data>
-		SWKjVjDyG8C7U/R5XKppS79Gn4s=
 		</data>
 		<key>Headers/PCFRemoteStore.h</key>
 		<data>

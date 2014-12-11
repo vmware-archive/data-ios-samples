@@ -10,55 +10,42 @@
 #import "AppDelegate.h"
 #import <PCFData/PCFData.h>
 
-#ifndef DEBUG
-#define NSLog(...)
-#endif
-
-@interface ViewController ()
-
-- (void)handleResponse:(PCFResponse *)response;
-@end
-
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [PCFLogger sharedInstance].level = PCFLogLevelDebug;
+    
+    self.object = [[PCFDataObject alloc] initWithCollection:@"objects" key:@"key"];
 }
 
 - (IBAction)fetchObject:(id)sender {
-    PCFOfflineStore *dataStore = [[PCFOfflineStore alloc] initWithCollection:@"objects"];
-    PCFDataObject *object = [[PCFDataObject alloc] initWithDataStore:dataStore key:@"key"];
-    
-    [object getWithAccessToken:kAccessToken completionBlock:^(PCFResponse *response) {
+    [self.object getWithAccessToken:kAccessToken completionBlock:^(PCFResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (IBAction)saveObject:(id)sender {
-    PCFOfflineStore *dataStore = [[PCFOfflineStore alloc] initWithCollection:@"objects"];
-    PCFDataObject *object = [[PCFDataObject alloc] initWithDataStore:dataStore key:@"key"];
-    
-    [object putWithAccessToken:kAccessToken value:self.textField.text completionBlock:^(PCFResponse *response) {
+    [self.object putWithAccessToken:kAccessToken value:self.textField.text completionBlock:^(PCFResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (IBAction)deleteObject:(id)sender {
-    PCFOfflineStore *dataStore = [[PCFOfflineStore alloc] initWithCollection:@"objects"];
-    PCFDataObject *object = [[PCFDataObject alloc] initWithDataStore:dataStore key:@"key"];
-    
-    [object deleteWithAccessToken:kAccessToken completionBlock:^(PCFResponse *response) {
+    [self.object deleteWithAccessToken:kAccessToken completionBlock:^(PCFResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (void)handleResponse:(PCFResponse *)response {
-    NSLog(@"%@", response);
+
     self.textField.text = response.value;
     
     if (response.error) {
-        NSString *errorCode = [NSString stringWithFormat: @"%d", (int)response.error.code];
+        NSLog(@"PCFResponse error: %@", response.error);
+        
+        NSString *errorCode = [NSString stringWithFormat: @"%d", (int) response.error.code];
         
         if (errorCode == nil || [errorCode isEqual:@""]) {
             errorCode = @"none";
@@ -70,8 +57,10 @@
             errorDescription = @"";
         }
         
-        [self.errorLabel setText:[@"Error Code: " stringByAppendingString:[errorCode stringByAppendingString:[@"\nDescription: " stringByAppendingString:errorDescription]]]];
+        [self.errorLabel setText:[NSString stringWithFormat:@"Error Code: %@\n\nDescription: %@", errorCode, errorDescription]];
     } else {
+        NSLog(@"PCFResponse value: %@", response.value);
+        
         [self.errorLabel setText:@""];
     }
 }

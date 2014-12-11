@@ -15,15 +15,8 @@
 
 @implementation AppDelegate
 
-+ (void)load {
-    [PCFLogger setDebug:true];
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     [[PCFRequestCache sharedInstance] executePendingRequestsWithToken:kAccessToken];
-    
     return YES;
 }
 
