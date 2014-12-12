@@ -38,6 +38,24 @@
     }];
 }
 
+- (IBAction)forceFetchObject:(id)sender {
+    [self.object getWithAccessToken:kAccessToken force:true completionBlock:^(PCFResponse *response) {
+        [self handleResponse:response];
+    }];
+}
+
+- (IBAction)forceSaveObject:(id)sender {
+    [self.object putWithAccessToken:kAccessToken value:self.textField.text force:true completionBlock:^(PCFResponse *response) {
+        [self handleResponse:response];
+    }];
+}
+
+- (IBAction)forceDeleteObject:(id)sender {
+    [self.object deleteWithAccessToken:kAccessToken force:true completionBlock:^(PCFResponse *response) {
+        [self handleResponse:response];
+    }];
+}
+
 - (void)handleResponse:(PCFResponse *)response {
 
     self.textField.text = response.value;

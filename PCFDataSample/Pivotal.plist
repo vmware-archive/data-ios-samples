@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>pivotal.data.serviceUrl</key>
-	<string>http://datasync-backend.kona.coffee.cfms-apps.com</string>
-	<key>pivotal.data.etagsEnabled</key>
-	<true/>
+	<string>http://datasync-backend.one.pepsi.cf-app.com/data/sample</string>
+	<key>pivotal.data.collisionStrategy</key>
+	<string>OptimisticLocking</string>
 </dict>
 </plist>
