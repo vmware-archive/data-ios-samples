@@ -15,8 +15,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [PCFLogger sharedInstance].level = PCFLogLevelDebug;
-    
     self.object = [[PCFDataObject alloc] initWithCollection:@"objects" key:@"key"];
 }
 

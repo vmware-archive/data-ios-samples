@@ -16,7 +16,11 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[PCFRequestCache sharedInstance] executePendingRequestsWithToken:kAccessToken];
+    
+    [PCFData startSyncingWithBlock:^() {
+        [PCFData syncWithAccessToken:kAccessToken];
+    }];
+    
     return YES;
 }
 
@@ -43,7 +47,7 @@
 }
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    [[PCFRequestCache sharedInstance] executePendingRequestsWithToken:kAccessToken completionHandler:completionHandler];
+    [PCFData syncWithAccessToken:kAccessToken completionHandler:completionHandler];
 }
 
 @end

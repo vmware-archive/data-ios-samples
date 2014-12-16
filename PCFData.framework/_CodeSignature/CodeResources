@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PCFData.h</key>
 		<data>
-		3NPeXKVVX5fnhJV9dwQTUNIagWI=
+		7LsTiT1az/swbOxATyln7P2IbzQ=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
@@ -20,21 +20,13 @@
 		<data>
 		YZi2BTDxPwIavQpTAMPxyaVZDAo=
 		</data>
-		<key>Headers/PCFLogger.h</key>
-		<data>
-		Ma1WE77fUp5rl5/TvYBBqAwreKg=
-		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
-		U6HCm4llFSV+1kMXBkVXR8k7Ias=
+		5fnvHqgrYlvArVWYrVrtArmfc/k=
 		</data>
 		<key>Headers/PCFRemoteStore.h</key>
 		<data>
-		8N592z65I2ypEv5XDEndLTMrpqc=
-		</data>
-		<key>Headers/PCFRequestCache.h</key>
-		<data>
-		YTu7/i27PoDUyzNYmXrLzThxnuw=
+		xZ179zsN9DJekw0gtGt7SMoYaZc=
 		</data>
 		<key>Headers/PCFResponse.h</key>
 		<data>
@@ -42,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		E0fPlUt0SnFEG91HhwIzDi3UDuU=
+		mlpsqA4qzAlzLbaMdoahWzz3kgg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,7 +45,7 @@
 	<dict>
 		<key>Headers/PCFData.h</key>
 		<data>
-		3NPeXKVVX5fnhJV9dwQTUNIagWI=
+		7LsTiT1az/swbOxATyln7P2IbzQ=
 		</data>
 		<key>Headers/PCFDataObject.h</key>
 		<data>
@@ -67,21 +59,13 @@
 		<data>
 		YZi2BTDxPwIavQpTAMPxyaVZDAo=
 		</data>
-		<key>Headers/PCFLogger.h</key>
-		<data>
-		Ma1WE77fUp5rl5/TvYBBqAwreKg=
-		</data>
 		<key>Headers/PCFOfflineStore.h</key>
 		<data>
-		U6HCm4llFSV+1kMXBkVXR8k7Ias=
+		5fnvHqgrYlvArVWYrVrtArmfc/k=
 		</data>
 		<key>Headers/PCFRemoteStore.h</key>
 		<data>
-		8N592z65I2ypEv5XDEndLTMrpqc=
-		</data>
-		<key>Headers/PCFRequestCache.h</key>
-		<data>
-		YTu7/i27PoDUyzNYmXrLzThxnuw=
+		xZ179zsN9DJekw0gtGt7SMoYaZc=
 		</data>
 		<key>Headers/PCFResponse.h</key>
 		<data>
