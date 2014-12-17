@@ -15,43 +15,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [PCFData logLevel:PCFLogLevelDebug];
+    
     self.object = [[PCFDataObject alloc] initWithCollection:@"objects" key:@"key"];
 }
 
 - (IBAction)fetchObject:(id)sender {
-    [self.object getWithAccessToken:kAccessToken completionBlock:^(PCFResponse *response) {
+    [self.object getWithAccessToken:kAccessToken force:self.force completionBlock:^(PCFResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (IBAction)saveObject:(id)sender {
-    [self.object putWithAccessToken:kAccessToken value:self.textField.text completionBlock:^(PCFResponse *response) {
+    [self.object putWithAccessToken:kAccessToken value:self.textField.text force:self.force completionBlock:^(PCFResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (IBAction)deleteObject:(id)sender {
-    [self.object deleteWithAccessToken:kAccessToken completionBlock:^(PCFResponse *response) {
+    [self.object deleteWithAccessToken:kAccessToken force:self.force completionBlock:^(PCFResponse *response) {
         [self handleResponse:response];
     }];
 }
 
-- (IBAction)forceFetchObject:(id)sender {
-    [self.object getWithAccessToken:kAccessToken force:true completionBlock:^(PCFResponse *response) {
-        [self handleResponse:response];
-    }];
-}
-
-- (IBAction)forceSaveObject:(id)sender {
-    [self.object putWithAccessToken:kAccessToken value:self.textField.text force:true completionBlock:^(PCFResponse *response) {
-        [self handleResponse:response];
-    }];
-}
-
-- (IBAction)forceDeleteObject:(id)sender {
-    [self.object deleteWithAccessToken:kAccessToken force:true completionBlock:^(PCFResponse *response) {
-        [self handleResponse:response];
-    }];
+- (BOOL)force {
+    return !self.etagSwitch.isOn;
 }
 
 - (void)handleResponse:(PCFResponse *)response {
@@ -79,6 +67,11 @@
         
         [self.errorLabel setText:@""];
     }
+}
+
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

@@ -15,8 +15,8 @@
 		E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0001A28E44600EFC209 /* Images.xcassets */; };
 		E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0021A28E44600EFC209 /* LaunchScreen.xib */; };
 		E12CD0101A28E44600EFC209 /* PCFDataSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */; };
-		E15732561A3B80B9000F80AA /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15732541A3B80B0000F80AA /* PCFData.framework */; };
-		E15732571A3B80B9000F80AA /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E15732541A3B80B0000F80AA /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1BF42CA1A421EB300B4707D /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BF42C81A421EA900B4707D /* PCFData.framework */; };
+		E1BF42CB1A421EB300B4707D /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1BF42C81A421EA900B4707D /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E15732571A3B80B9000F80AA /* PCFData.framework in Embed Frameworks */,
+				E1BF42CB1A421EB300B4707D /* PCFData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +58,7 @@
 		E12CD0091A28E44600EFC209 /* PCFDataSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCFDataSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CD00E1A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCFDataSampleTests.m; sourceTree = "<group>"; };
-		E15732541A3B80B0000F80AA /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
+		E1BF42C81A421EA900B4707D /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15732561A3B80B9000F80AA /* PCFData.framework in Frameworks */,
+				E1BF42CA1A421EB300B4707D /* PCFData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		E12CCFE71A28E44600EFC209 = {
 			isa = PBXGroup;
 			children = (
-				E15732541A3B80B0000F80AA /* PCFData.framework */,
+				E1BF42C81A421EA900B4707D /* PCFData.framework */,
 				E12CCFF21A28E44600EFC209 /* PCFDataSample */,
 				E12CD00C1A28E44600EFC209 /* PCFDataSampleTests */,
 				E12CCFF11A28E44600EFC209 /* Products */,
@@ -376,17 +376,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: Robert Szumlakowski (TAAP59C578)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PCFDataSample",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PCFData-hhygyzpsmoblnpaspkwbuckcuceo/Build/Products/Debug-iphoneos",
+					"/Users/dx122-xl/Desktop/PCFData-Release-iphoneuniversal",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = PCFDataSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -396,17 +404,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: Robert Szumlakowski (TAAP59C578)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PCFDataSample",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PCFData-hhygyzpsmoblnpaspkwbuckcuceo/Build/Products/Debug-iphoneos",
+					"/Users/dx122-xl/Desktop/PCFData-Release-iphoneuniversal",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = PCFDataSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

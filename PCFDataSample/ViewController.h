@@ -16,6 +16,7 @@
 
 @property IBOutlet UITextView *errorLabel;
 @property IBOutlet UITextField *textField;
+@property IBOutlet UISwitch *etagSwitch;
 
 @end
 
