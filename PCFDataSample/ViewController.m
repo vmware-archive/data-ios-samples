@@ -9,32 +9,65 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import <PCFData/PCFData.h>
+#import <PCFAuth/PCFAuth.h>
 
 @implementation ViewController
+
+static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [PCFData logLevel:PCFLogLevelDebug];
+    [PCFData logLevel:PCFDataLogLevelDebug];
+    [PCFAuth logLevel:PCFAuthLogLevelDebug];
     
-    self.object = [[PCFDataObject alloc] initWithCollection:@"objects" key:@"key"];
+    self.object = [[PCFKeyValueObject alloc] initWithCollection:@"objects" key:@"key"];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults addObserver:self forKeyPath:PCFDataRequestCache options:NSKeyValueObservingOptionNew context:0];
+}
+
+- (void)dealloc {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObserver:self forKeyPath:PCFDataRequestCache];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([object isKindOfClass:[NSUserDefaults class]]) {
+        if ([keyPath isEqualToString:PCFDataRequestCache]) {
+            NSString *content = [object objectForKey:PCFDataRequestCache];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"%@ changed.", PCFDataRequestCache);
+                
+                self.cachedContent.text = content;
+            });
+        }
+    }
 }
 
 - (IBAction)fetchObject:(id)sender {
-    [self.object getWithAccessToken:kAccessToken force:self.force completionBlock:^(PCFResponse *response) {
-        [self handleResponse:response];
+    [PCFAuth tokenWithBlock:^(NSString *token) {
+        [self.object getWithAccessToken:token force:self.force completionBlock:^(PCFResponse *response) {
+            [self handleResponse:response];
+        }];
     }];
 }
 
 - (IBAction)saveObject:(id)sender {
-    [self.object putWithAccessToken:kAccessToken value:self.textField.text force:self.force completionBlock:^(PCFResponse *response) {
-        [self handleResponse:response];
+    [PCFAuth tokenWithBlock:^(NSString *token) {
+        [self.object putWithAccessToken:token value:self.textField.text force:self.force completionBlock:^(PCFResponse *response) {
+            [self handleResponse:response];
+        }];
     }];
 }
 
 - (IBAction)deleteObject:(id)sender {
-    [self.object deleteWithAccessToken:kAccessToken force:self.force completionBlock:^(PCFResponse *response) {
-        [self handleResponse:response];
+    [PCFAuth tokenWithBlock:^(NSString *token) {
+        [self.object deleteWithAccessToken:token force:self.force completionBlock:^(PCFResponse *response) {
+            [self handleResponse:response];
+        }];
     }];
 }
 
@@ -44,7 +77,9 @@
 
 - (void)handleResponse:(PCFResponse *)response {
 
-    self.textField.text = response.value;
+    PCFKeyValue *keyValue = (PCFKeyValue *)response.object;
+    
+    self.textField.text = keyValue.value;
     
     if (response.error) {
         NSLog(@"PCFResponse error: %@", response.error);
@@ -63,13 +98,13 @@
         
         [self.errorLabel setText:[NSString stringWithFormat:@"Error Code: %@\n\nDescription: %@", errorCode, errorDescription]];
     } else {
-        NSLog(@"PCFResponse value: %@", response.value);
+        NSLog(@"PCFResponse value: %@", keyValue.value);
         
         [self.errorLabel setText:@""];
     }
 }
 
--(BOOL) textFieldShouldReturn: (UITextField *) textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }

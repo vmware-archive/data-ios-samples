@@ -4,100 +4,68 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/PCFData.h</key>
+		<key>Headers/PCFAuth.h</key>
 		<data>
-		hgCAobkOmygKJZU33XqjhMk4t3Y=
+		sWtWbi/ZWULR+GBh5iNDS5ZgAh4=
 		</data>
-		<key>Headers/PCFDataStore.h</key>
+		<key>Headers/PCFLoginViewController.h</key>
 		<data>
-		FNheg1iV+9tknfAlkTUe7KXRySQ=
-		</data>
-		<key>Headers/PCFKeyValue.h</key>
-		<data>
-		G2eg5Ks91LFuP/6ayYJ7nqCa+10=
-		</data>
-		<key>Headers/PCFKeyValueObject.h</key>
-		<data>
-		xlFuTGRCyzPJSNuWXPk0YD+msoI=
-		</data>
-		<key>Headers/PCFKeyValueStore.h</key>
-		<data>
-		cvF3z18S85cp7Dc93ncI+z1RqxM=
-		</data>
-		<key>Headers/PCFMappable.h</key>
-		<data>
-		42o6B7bRwVYpdzNof2PRlewoVuM=
-		</data>
-		<key>Headers/PCFOfflineStore.h</key>
-		<data>
-		Mz+rzVZ2cfvAOd2SaqhFRYbUCao=
-		</data>
-		<key>Headers/PCFRemoteStore.h</key>
-		<data>
-		xHDrBR6Dxq+TvbOSx5mTxmXwvUg=
-		</data>
-		<key>Headers/PCFRequest.h</key>
-		<data>
-		eI8yQ6+fTVOAk22LI3aSQieVgSc=
-		</data>
-		<key>Headers/PCFResponse.h</key>
-		<data>
-		HHU3MU7dbqVMz3YiuGp2iwCnzr4=
+		PCXjPeuYkmPw4xS21hLZMaloJxc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kpoChxhJQj0cILMutdx5Ng1QuCA=
+		7PIRdDEKofws0Yj+7iWxYNP2cUU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		zs1u5DQgvOkG2RlSL4ojSeePCnI=
+		Kx1EYjiyd4a1rLnpbI1Wgy3e8h4=
+		</data>
+		<key>PCFLoginViewController~ipad.nib/objects-8.0+.nib</key>
+		<data>
+		GaIebGT3+2qs9KwZsNXhvJ6G38o=
+		</data>
+		<key>PCFLoginViewController~ipad.nib/runtime.nib</key>
+		<data>
+		57zqiNvKsr+6VZgK51ZfXWVXk0w=
+		</data>
+		<key>PCFLoginViewController~iphone.nib/objects-8.0+.nib</key>
+		<data>
+		6VlOxgjgX2X9LFkv5PRL60iRaN0=
+		</data>
+		<key>PCFLoginViewController~iphone.nib/runtime.nib</key>
+		<data>
+		sIgcPkr97Sov4xx8fy0VdUfe8BA=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/PCFData.h</key>
+		<key>Headers/PCFAuth.h</key>
 		<data>
-		hgCAobkOmygKJZU33XqjhMk4t3Y=
+		sWtWbi/ZWULR+GBh5iNDS5ZgAh4=
 		</data>
-		<key>Headers/PCFDataStore.h</key>
+		<key>Headers/PCFLoginViewController.h</key>
 		<data>
-		FNheg1iV+9tknfAlkTUe7KXRySQ=
-		</data>
-		<key>Headers/PCFKeyValue.h</key>
-		<data>
-		G2eg5Ks91LFuP/6ayYJ7nqCa+10=
-		</data>
-		<key>Headers/PCFKeyValueObject.h</key>
-		<data>
-		xlFuTGRCyzPJSNuWXPk0YD+msoI=
-		</data>
-		<key>Headers/PCFKeyValueStore.h</key>
-		<data>
-		cvF3z18S85cp7Dc93ncI+z1RqxM=
-		</data>
-		<key>Headers/PCFMappable.h</key>
-		<data>
-		42o6B7bRwVYpdzNof2PRlewoVuM=
-		</data>
-		<key>Headers/PCFOfflineStore.h</key>
-		<data>
-		Mz+rzVZ2cfvAOd2SaqhFRYbUCao=
-		</data>
-		<key>Headers/PCFRemoteStore.h</key>
-		<data>
-		xHDrBR6Dxq+TvbOSx5mTxmXwvUg=
-		</data>
-		<key>Headers/PCFRequest.h</key>
-		<data>
-		eI8yQ6+fTVOAk22LI3aSQieVgSc=
-		</data>
-		<key>Headers/PCFResponse.h</key>
-		<data>
-		HHU3MU7dbqVMz3YiuGp2iwCnzr4=
+		PCXjPeuYkmPw4xS21hLZMaloJxc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		zs1u5DQgvOkG2RlSL4ojSeePCnI=
+		Kx1EYjiyd4a1rLnpbI1Wgy3e8h4=
+		</data>
+		<key>PCFLoginViewController~ipad.nib/objects-8.0+.nib</key>
+		<data>
+		GaIebGT3+2qs9KwZsNXhvJ6G38o=
+		</data>
+		<key>PCFLoginViewController~ipad.nib/runtime.nib</key>
+		<data>
+		57zqiNvKsr+6VZgK51ZfXWVXk0w=
+		</data>
+		<key>PCFLoginViewController~iphone.nib/objects-8.0+.nib</key>
+		<data>
+		6VlOxgjgX2X9LFkv5PRL60iRaN0=
+		</data>
+		<key>PCFLoginViewController~iphone.nib/runtime.nib</key>
+		<data>
+		sIgcPkr97Sov4xx8fy0VdUfe8BA=
 		</data>
 	</dict>
 	<key>rules</key>

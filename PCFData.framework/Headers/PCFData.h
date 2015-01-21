@@ -7,32 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PCFData/PCFDataObject.h>
-#import <PCFData/PCFDataStore.h>
-#import <PCFData/PCFLocalStore.h>
-#import <PCFData/PCFRemoteStore.h>
-#import <PCFData/PCFOfflineStore.h>
-#import <PCFData/PCFResponse.h>
+#import "PCFDataStore.h"
+#import "PCFKeyValue.h"
+#import "PCFKeyValueObject.h"
+#import "PCFKeyValueStore.h"
+#import "PCFRemoteStore.h"
+#import "PCFOfflineStore.h"
+#import "PCFResponse.h"
+#import "PCFRequest.h"
+
+typedef NS_ENUM(NSInteger, PCFDataLogLevel) {
+    PCFDataLogLevelDebug = 0,
+    PCFDataLogLevelInfo,
+    PCFDataLogLevelWarning,
+    PCFDataLogLevelError,
+    PCFDataLogLevelCritical,
+    PCFDataLogLevelNone
+};
 
 typedef void (^SyncBlock) (void);
 
-typedef NS_ENUM(NSInteger, PCFLogLevel) {
-    PCFLogLevelDebug = 0,
-    PCFLogLevelInfo,
-    PCFLogLevelWarning,
-    PCFLogLevelError,
-    PCFLogLevelCritical,
-    PCFLogLevelNone
-};
-
 @interface PCFData : NSObject
 
-+ (void)startSyncingWithBlock:(SyncBlock)syncBlock;
++ (void)syncWhenNetworkAvailableWithBlock:(SyncBlock)syncBlock;
 
 + (void)syncWithAccessToken:(NSString *)accessToken;
 
 + (void)syncWithAccessToken:(NSString *)accessToken completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
 
-+ (void)logLevel:(PCFLogLevel)level;
++ (void)logLevel:(PCFDataLogLevel)level;
 
 @end

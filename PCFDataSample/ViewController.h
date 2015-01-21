@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class PCFDataObject;
+@class PCFKeyValueObject;
 
 @interface ViewController : UIViewController
 
-@property PCFDataObject *object;
+@property PCFKeyValueObject *object;
 
-@property IBOutlet UITextView *errorLabel;
 @property IBOutlet UITextField *textField;
 @property IBOutlet UISwitch *etagSwitch;
+@property IBOutlet UITextView *errorLabel;
+@property IBOutlet UITextView *cachedContent;
 
 @end
 

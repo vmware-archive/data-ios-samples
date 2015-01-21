@@ -11,12 +11,14 @@
 		E12CCFF61A28E44600EFC209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF51A28E44600EFC209 /* main.m */; };
 		E12CCFF91A28E44600EFC209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF81A28E44600EFC209 /* AppDelegate.m */; };
 		E12CCFFC1A28E44600EFC209 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFFB1A28E44600EFC209 /* ViewController.m */; };
-		E12CCFFF1A28E44600EFC209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12CCFFD1A28E44600EFC209 /* Main.storyboard */; };
 		E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0001A28E44600EFC209 /* Images.xcassets */; };
 		E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0021A28E44600EFC209 /* LaunchScreen.xib */; };
 		E12CD0101A28E44600EFC209 /* PCFDataSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */; };
-		E1BF42CA1A421EB300B4707D /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BF42C81A421EA900B4707D /* PCFData.framework */; };
-		E1BF42CB1A421EB300B4707D /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1BF42C81A421EA900B4707D /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1DA3DA81A704A2900057671 /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA3D981A70447600057671 /* PCFAuth.framework */; };
+		E1DA3DA91A704A2900057671 /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA3D981A70447600057671 /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3DBE1A704F1000057671 /* Main.storyboard */; };
+		E1DA3DCD1A706C7200057671 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA3DCB1A706C6A00057671 /* PCFData.framework */; };
+		E1DA3DCE1A706C7200057671 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA3DCB1A706C6A00057671 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E1BF42CB1A421EB300B4707D /* PCFData.framework in Embed Frameworks */,
+				E1DA3DCE1A706C7200057671 /* PCFData.framework in Embed Frameworks */,
+				E1DA3DA91A704A2900057671 /* PCFAuth.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,13 +55,14 @@
 		E12CCFF81A28E44600EFC209 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E12CCFFA1A28E44600EFC209 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E12CCFFB1A28E44600EFC209 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E12CCFFE1A28E44600EFC209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E12CD0001A28E44600EFC209 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E12CD0031A28E44600EFC209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E12CD0091A28E44600EFC209 /* PCFDataSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCFDataSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CD00E1A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCFDataSampleTests.m; sourceTree = "<group>"; };
-		E1BF42C81A421EA900B4707D /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
+		E1DA3D981A70447600057671 /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
+		E1DA3DBE1A704F1000057671 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E1DA3DCB1A706C6A00057671 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1BF42CA1A421EB300B4707D /* PCFData.framework in Frameworks */,
+				E1DA3DCD1A706C7200057671 /* PCFData.framework in Frameworks */,
+				E1DA3DA81A704A2900057671 /* PCFAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +88,8 @@
 		E12CCFE71A28E44600EFC209 = {
 			isa = PBXGroup;
 			children = (
-				E1BF42C81A421EA900B4707D /* PCFData.framework */,
+				E1DA3DCB1A706C6A00057671 /* PCFData.framework */,
+				E1DA3D981A70447600057671 /* PCFAuth.framework */,
 				E12CCFF21A28E44600EFC209 /* PCFDataSample */,
 				E12CD00C1A28E44600EFC209 /* PCFDataSampleTests */,
 				E12CCFF11A28E44600EFC209 /* Products */,
@@ -107,7 +113,7 @@
 				E12CCFF81A28E44600EFC209 /* AppDelegate.m */,
 				E12CCFFA1A28E44600EFC209 /* ViewController.h */,
 				E12CCFFB1A28E44600EFC209 /* ViewController.m */,
-				E12CCFFD1A28E44600EFC209 /* Main.storyboard */,
+				E1DA3DBE1A704F1000057671 /* Main.storyboard */,
 				E12CD0021A28E44600EFC209 /* LaunchScreen.xib */,
 				E12CD0001A28E44600EFC209 /* Images.xcassets */,
 			);
@@ -228,10 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E12CCFFF1A28E44600EFC209 /* Main.storyboard in Resources */,
 				E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */,
 				E11765AE1A36419700EF6B01 /* Pivotal.plist in Resources */,
 				E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */,
+				E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,14 +280,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E12CCFFD1A28E44600EFC209 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E12CCFFE1A28E44600EFC209 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E12CD0021A28E44600EFC209 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -332,6 +330,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -368,6 +367,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -396,6 +396,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -424,6 +425,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

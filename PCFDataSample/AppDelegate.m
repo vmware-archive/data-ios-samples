@@ -17,8 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [PCFData startSyncingWithBlock:^() {
-        [PCFData syncWithAccessToken:kAccessToken];
+    [PCFData syncWhenNetworkAvailableWithBlock:^() {
+        [PCFData syncWithAccessToken:nil];
     }];
     
     return YES;
@@ -47,7 +47,7 @@
 }
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    [PCFData syncWithAccessToken:kAccessToken completionHandler:completionHandler];
+    [PCFData syncWithAccessToken:nil completionHandler:completionHandler];
 }
 
 @end
