@@ -14,9 +14,10 @@
 
 @property PCFKeyValueObject *object;
 
+@property IBOutlet UILabel *server;
+@property IBOutlet UILabel *collection;
 @property IBOutlet UITextField *textField;
 @property IBOutlet UISwitch *etagSwitch;
-@property IBOutlet UITextView *errorLabel;
 @property IBOutlet UITextView *cachedContent;
 
 @end

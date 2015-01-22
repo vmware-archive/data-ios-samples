@@ -10,10 +10,14 @@
 #import "AppDelegate.h"
 #import <PCFData/PCFData.h>
 #import <PCFAuth/PCFAuth.h>
+#import "Config.h"
 
 @implementation ViewController
 
 static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
+
+static NSString* const PCFCollection = @"objects";
+static NSString* const PCFKey = @"key";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,10 +25,16 @@ static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
     [PCFData logLevel:PCFDataLogLevelDebug];
     [PCFAuth logLevel:PCFAuthLogLevelDebug];
     
-    self.object = [[PCFKeyValueObject alloc] initWithCollection:@"objects" key:@"key"];
+    [self observeRequestCacheChanges];
     
+    self.server.text = [Config serviceUrl];
+    self.collection.text = [NSString stringWithFormat:@"Collection: %@, Key: %@", PCFCollection, PCFKey];
+    
+    self.object = [[PCFKeyValueObject alloc] initWithCollection:PCFCollection key:PCFKey];
+}
+
+- (void)observeRequestCacheChanges {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
     [defaults addObserver:self forKeyPath:PCFDataRequestCache options:NSKeyValueObservingOptionNew context:0];
 }
 
@@ -36,15 +46,19 @@ static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([object isKindOfClass:[NSUserDefaults class]]) {
         if ([keyPath isEqualToString:PCFDataRequestCache]) {
-            NSString *content = [object objectForKey:PCFDataRequestCache];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"%@ changed.", PCFDataRequestCache);
-                
-                self.cachedContent.text = content;
-            });
+            [self updateCachedContent:object];
         }
     }
+}
+
+- (void)updateCachedContent:(id)object {
+    NSString *content = [object objectForKey:PCFDataRequestCache];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"%@ changed.", PCFDataRequestCache);
+        
+        self.cachedContent.text = content;
+    });
 }
 
 - (IBAction)fetchObject:(id)sender {
@@ -79,9 +93,17 @@ static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
 
     PCFKeyValue *keyValue = (PCFKeyValue *)response.object;
     
+    NSLog(@"PCFResponse value: %@", keyValue.value);
+    
     self.textField.text = keyValue.value;
     
+    [self parseError:response];
+}
+
+- (void)parseError:(PCFResponse *)response {
+
     if (response.error) {
+
         NSLog(@"PCFResponse error: %@", response.error);
         
         NSString *errorCode = [NSString stringWithFormat: @"%d", (int) response.error.code];
@@ -90,18 +112,18 @@ static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
             errorCode = @"none";
         }
         
-        NSString *errorDescription = [[response error] localizedDescription];
+        NSString *errorDescription = response.error.localizedDescription;
         
         if (errorDescription == nil) {
             errorDescription = @"";
         }
         
-        [self.errorLabel setText:[NSString stringWithFormat:@"Error Code: %@\n\nDescription: %@", errorCode, errorDescription]];
-    } else {
-        NSLog(@"PCFResponse value: %@", keyValue.value);
+        NSString *title = [NSString stringWithFormat:@"Error Code %@", errorCode];
+        NSString *message = [NSString stringWithFormat:@"Error Description %@", errorDescription];
         
-        [self.errorLabel setText:@""];
+        [[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
