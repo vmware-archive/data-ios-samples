@@ -62,7 +62,7 @@ static NSString* const PCFKey = @"key";
 }
 
 - (IBAction)fetchObject:(id)sender {
-    [PCFAuth tokenWithBlock:^(NSString *token) {
+    [PCFAuth tokenWithBlock:^(NSString *token, NSError *error) {
         [self.object getWithAccessToken:token force:self.force completionBlock:^(PCFResponse *response) {
             [self handleResponse:response];
         }];
@@ -70,7 +70,7 @@ static NSString* const PCFKey = @"key";
 }
 
 - (IBAction)saveObject:(id)sender {
-    [PCFAuth tokenWithBlock:^(NSString *token) {
+    [PCFAuth tokenWithBlock:^(NSString *token, NSError *error) {
         [self.object putWithAccessToken:token value:self.textField.text force:self.force completionBlock:^(PCFResponse *response) {
             [self handleResponse:response];
         }];
@@ -78,7 +78,7 @@ static NSString* const PCFKey = @"key";
 }
 
 - (IBAction)deleteObject:(id)sender {
-    [PCFAuth tokenWithBlock:^(NSString *token) {
+    [PCFAuth tokenWithBlock:^(NSString *token, NSError *error) {
         [self.object deleteWithAccessToken:token force:self.force completionBlock:^(PCFResponse *response) {
             [self handleResponse:response];
         }];
