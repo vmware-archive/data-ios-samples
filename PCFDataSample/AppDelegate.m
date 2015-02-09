@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <PCFData/PCFData.h>
+#import <PCFAuth/PCFAuth.h>
 
 @interface AppDelegate ()
 
@@ -17,8 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [PCFData syncWhenNetworkAvailableWithBlock:^() {
-        [PCFData syncWithAccessToken:nil];
+    [PCFData registerTokenProviderBlock:^() {
+        PCFAuthResponse *response = [PCFAuth fetchToken];
+        return response.accessToken;
+    }];
+    
+    [PCFData registerTokenProviderWithUserPromptBlock:^() {
+        PCFAuthResponse *response = [PCFAuth fetchTokenWithUserPrompt];
+        return response.accessToken;
     }];
     
     return YES;
@@ -47,7 +54,7 @@
 }
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    [PCFData syncWithAccessToken:nil completionHandler:completionHandler];
+    [PCFData performSyncWithCompletionHandler:completionHandler];
 }
 
 @end

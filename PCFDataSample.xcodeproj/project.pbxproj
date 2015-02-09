@@ -16,9 +16,10 @@
 		E12CD0101A28E44600EFC209 /* PCFDataSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */; };
 		E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3DBE1A704F1000057671 /* Main.storyboard */; };
 		E1DA3DDB1A71646500057671 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3DDA1A71646500057671 /* Config.m */; };
-		E1DA426D1A76A5D900AD63F2 /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA426B1A76A5D300AD63F2 /* PCFAuth.framework */; };
-		E1DA426E1A76A5D900AD63F2 /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA426B1A76A5D300AD63F2 /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E1DA43291A7BF2E900AD63F2 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA43281A7BF2E900AD63F2 /* PCFData.framework */; };
+		E1DA437A1A855A9C00AD63F2 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA43781A855A9100AD63F2 /* PCFData.framework */; };
+		E1DA437B1A855A9C00AD63F2 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA43781A855A9100AD63F2 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1DA438A1A890C6200AD63F2 /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA43881A890C5900AD63F2 /* PCFAuth.framework */; };
+		E1DA438B1A890C6200AD63F2 /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA43881A890C5900AD63F2 /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E1DA426E1A76A5D900AD63F2 /* PCFAuth.framework in Embed Frameworks */,
+				E1DA438B1A890C6200AD63F2 /* PCFAuth.framework in Embed Frameworks */,
+				E1DA437B1A855A9C00AD63F2 /* PCFData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,8 +64,8 @@
 		E1DA3DBE1A704F1000057671 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E1DA3DD91A71646500057671 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		E1DA3DDA1A71646500057671 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
-		E1DA426B1A76A5D300AD63F2 /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
-		E1DA43281A7BF2E900AD63F2 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
+		E1DA43781A855A9100AD63F2 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
+		E1DA43881A890C5900AD63F2 /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DA43291A7BF2E900AD63F2 /* PCFData.framework in Frameworks */,
-				E1DA426D1A76A5D900AD63F2 /* PCFAuth.framework in Frameworks */,
+				E1DA438A1A890C6200AD63F2 /* PCFAuth.framework in Frameworks */,
+				E1DA437A1A855A9C00AD63F2 /* PCFData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +91,8 @@
 		E12CCFE71A28E44600EFC209 = {
 			isa = PBXGroup;
 			children = (
-				E1DA43281A7BF2E900AD63F2 /* PCFData.framework */,
-				E1DA426B1A76A5D300AD63F2 /* PCFAuth.framework */,
+				E1DA43881A890C5900AD63F2 /* PCFAuth.framework */,
+				E1DA43781A855A9100AD63F2 /* PCFData.framework */,
 				E12CCFF21A28E44600EFC209 /* PCFDataSample */,
 				E12CD00C1A28E44600EFC209 /* PCFDataSampleTests */,
 				E12CCFF11A28E44600EFC209 /* Products */,

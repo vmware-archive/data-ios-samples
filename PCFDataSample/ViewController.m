@@ -25,20 +25,22 @@ static NSString* const PCFKey = @"key";
     [PCFData logLevel:PCFDataLogLevelDebug];
     [PCFAuth logLevel:PCFAuthLogLevelDebug];
     
-    [self observeRequestCacheChanges];
-    
     self.server.text = [Config serviceUrl];
     self.collection.text = [NSString stringWithFormat:@"Collection: %@, Key: %@", PCFCollection, PCFKey];
     
-    self.object = [[PCFKeyValueObject alloc] initWithCollection:PCFCollection key:PCFKey];
+    self.object = [PCFKeyValueObject objectWithCollection:PCFCollection key:PCFKey];
 }
 
-- (void)observeRequestCacheChanges {
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults addObserver:self forKeyPath:PCFDataRequestCache options:NSKeyValueObservingOptionNew context:0];
 }
 
-- (void)dealloc {
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObserver:self forKeyPath:PCFDataRequestCache];
 }
@@ -62,27 +64,25 @@ static NSString* const PCFKey = @"key";
 }
 
 - (IBAction)fetchObject:(id)sender {
-    [PCFAuth tokenWithBlock:^(NSString *token, NSError *error) {
-        [self.object getWithAccessToken:token force:self.force completionBlock:^(PCFResponse *response) {
-            [self handleResponse:response];
-        }];
+    [self.object getWithCompletionBlock:^(PCFResponse *response) {
+        [self handleResponse:response];
     }];
 }
 
 - (IBAction)saveObject:(id)sender {
-    [PCFAuth tokenWithBlock:^(NSString *token, NSError *error) {
-        [self.object putWithAccessToken:token value:self.textField.text force:self.force completionBlock:^(PCFResponse *response) {
-            [self handleResponse:response];
-        }];
+    [self.object putWithValue:self.textField.text completionBlock:^(PCFResponse *response) {
+        [self handleResponse:response];
     }];
 }
 
 - (IBAction)deleteObject:(id)sender {
-    [PCFAuth tokenWithBlock:^(NSString *token, NSError *error) {
-        [self.object deleteWithAccessToken:token force:self.force completionBlock:^(PCFResponse *response) {
-            [self handleResponse:response];
-        }];
+    [self.object deleteWithCompletionBlock:^(PCFResponse *response) {
+        [self handleResponse:response];
     }];
+}
+
+- (IBAction)logout:(id)sender {
+    [PCFAuth invalidateToken];
 }
 
 - (BOOL)force {
