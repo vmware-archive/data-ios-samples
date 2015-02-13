@@ -1,3 +1,5 @@
+source 'git@github.com:cfmobile/cocoapods'
+
 platform :ios, '7.0'
 
 # Read pod from remote repository
