@@ -10,7 +10,7 @@
 
 @class PCFKeyValueObject;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>
 
 @property PCFKeyValueObject *object;
 

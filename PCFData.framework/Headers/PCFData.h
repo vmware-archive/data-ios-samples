@@ -10,11 +10,11 @@
 #import "PCFDataStore.h"
 #import "PCFKeyValue.h"
 #import "PCFKeyValueObject.h"
-#import "PCFKeyValueStore.h"
-#import "PCFRemoteStore.h"
-#import "PCFOfflineStore.h"
-#import "PCFResponse.h"
-#import "PCFRequest.h"
+#import "PCFKeyValueLocalStore.h"
+#import "PCFKeyValueRemoteStore.h"
+#import "PCFKeyValueOfflineStore.h"
+#import "PCFDataResponse.h"
+#import "PCFDataRequest.h"
 
 typedef NS_ENUM(NSInteger, PCFDataLogLevel) {
     PCFDataLogLevelDebug = 0,
@@ -25,18 +25,17 @@ typedef NS_ENUM(NSInteger, PCFDataLogLevel) {
     PCFDataLogLevelNone
 };
 
-typedef void (^PCFNetworkBlock) (void);
-typedef NSString* (^PCFTokenBlock) (void);
+typedef void (^PCFNetworkBlock) (BOOL connected);
+typedef NSString* (^PCFTokenProviderBlock) ();
+typedef void (^PCFTokenInvalidatorBlock) ();
 
 @interface PCFData : NSObject
 
-+ (void)registerTokenProviderBlock:(PCFTokenBlock)block;
++ (void)registerTokenProviderBlock:(PCFTokenProviderBlock)block;
 
-+ (void)registerTokenProviderWithUserPromptBlock:(PCFTokenBlock)block;
++ (void)registerTokenInvalidatorBlock:(PCFTokenInvalidatorBlock)block;
 
-+ (void)registerNetworkConnectedBlock:(PCFNetworkBlock)block;
-
-+ (void)registerNetworkDisconnectedBlock:(PCFNetworkBlock)block;
++ (void)registerNetworkObserverBlock:(PCFNetworkBlock)block;
 
 + (void)performSync;
 

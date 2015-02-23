@@ -11,16 +11,16 @@
 
 @class PCFAFOAuthCredential, PCFAuthCodeHandler;
 
-typedef void(^AuthClientBlock)(PCFAFOAuthCredential*, NSError*);
+typedef void(^PCFAuthClientBlock)(PCFAFOAuthCredential*, NSError*);
 
 @interface PCFAuthClient : NSObject
 
-+ (void)grantWithRefreshToken:(NSString *)refreshToken completionBlock:(AuthClientBlock)block;
++ (void)grantWithRefreshToken:(NSString *)refreshToken completionBlock:(PCFAuthClientBlock)block;
 
-+ (void)grantWithUsername:(NSString *)username password:(NSString *)password completionBlock:(AuthClientBlock)block;
++ (void)grantWithUsername:(NSString *)username password:(NSString *)password completionBlock:(PCFAuthClientBlock)block;
 
-+ (void)grantWithAuthCode:(NSString *)code completionBlock:(AuthClientBlock)block;
++ (void)grantWithAuthCode:(NSString *)code completionBlock:(PCFAuthClientBlock)block;
 
-+ (void)grantWithAuthCodeFlow:(UIWebView *)webview completionBlock:(AuthClientBlock)block;
++ (void)grantWithAuthCodeFlow:(UIWebView *)webview completionBlock:(PCFAuthClientBlock)block;
 
 @end

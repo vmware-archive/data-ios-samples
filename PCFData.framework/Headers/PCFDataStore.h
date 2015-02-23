@@ -8,23 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class PCFRequest, PCFResponse;
+@class PCFDataRequest, PCFDataResponse;
 
-typedef void(^PCFResponseBlock)(PCFResponse *response);
+typedef void(^PCFDataResponseBlock)(PCFDataResponse *response);
 
 @protocol PCFDataStore <NSObject>
 
-- (PCFResponse *)getWithRequest:(PCFRequest *)request;
+- (PCFDataResponse *)executeRequest:(PCFDataRequest *)request;
 
-- (void)getWithRequest:(PCFRequest *)request completionBlock:(PCFResponseBlock)completionBlock;
-
-- (PCFResponse *)putWithRequest:(PCFRequest *)request;
-
-- (void)putWithRequest:(PCFRequest *)request completionBlock:(PCFResponseBlock)completionBlock;
-
-- (PCFResponse *)deleteWithRequest:(PCFRequest *)request;
-
-- (void)deleteWithRequest:(PCFRequest *)request completionBlock:(PCFResponseBlock)completionBlock;
+- (void)executeRequest:(PCFDataRequest *)request completionBlock:(PCFDataResponseBlock)completionBlock;
 
 @end
 

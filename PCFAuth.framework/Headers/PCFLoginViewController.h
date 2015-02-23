@@ -13,9 +13,19 @@
 
 @interface PCFLoginViewController : UIViewController
 
-@property (strong) AuthClientBlock responseBlock;
+@property IBOutlet UITextField *usernameField;
+
+@property IBOutlet UITextField *passwordField;
+
+@property (strong) PCFAuthClientBlock responseBlock;
 
 - (void)didReceiveLoginError:(NSError *)error;
+
+- (IBAction)grantTypePassword:(id)sender;
+
+- (IBAction)grantTypeAuthCode:(id)sender;
+
+- (IBAction)cancel:(id)sender;
 
 - (UIWebView *)webview;
 - (NSString *)username;

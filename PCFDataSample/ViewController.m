@@ -29,6 +29,8 @@ static NSString* const PCFKey = @"key";
     self.collection.text = [NSString stringWithFormat:@"Collection: %@, Key: %@", PCFCollection, PCFKey];
     
     self.object = [PCFKeyValueObject objectWithCollection:PCFCollection key:PCFKey];
+    
+    [self.etagSwitch addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +45,10 @@ static NSString* const PCFKey = @"key";
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObserver:self forKeyPath:PCFDataRequestCache];
+}
+
+- (void)valueChanged:(id)sender {
+    self.object.force = [self force];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -64,19 +70,19 @@ static NSString* const PCFKey = @"key";
 }
 
 - (IBAction)fetchObject:(id)sender {
-    [self.object getWithCompletionBlock:^(PCFResponse *response) {
+    [self.object getWithCompletionBlock:^(PCFDataResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (IBAction)saveObject:(id)sender {
-    [self.object putWithValue:self.textField.text completionBlock:^(PCFResponse *response) {
+    [self.object putWithValue:self.textField.text completionBlock:^(PCFDataResponse *response) {
         [self handleResponse:response];
     }];
 }
 
 - (IBAction)deleteObject:(id)sender {
-    [self.object deleteWithCompletionBlock:^(PCFResponse *response) {
+    [self.object deleteWithCompletionBlock:^(PCFDataResponse *response) {
         [self handleResponse:response];
     }];
 }
@@ -89,7 +95,7 @@ static NSString* const PCFKey = @"key";
     return !self.etagSwitch.isOn;
 }
 
-- (void)handleResponse:(PCFResponse *)response {
+- (void)handleResponse:(PCFDataResponse *)response {
 
     PCFKeyValue *keyValue = (PCFKeyValue *)response.object;
     
@@ -100,7 +106,7 @@ static NSString* const PCFKey = @"key";
     [self parseError:response];
 }
 
-- (void)parseError:(PCFResponse *)response {
+- (void)parseError:(PCFDataResponse *)response {
 
     if (response.error) {
 

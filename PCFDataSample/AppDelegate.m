@@ -19,13 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [PCFData registerTokenProviderBlock:^() {
-        PCFAuthResponse *response = [PCFAuth fetchToken];
-        return response.accessToken;
+        return [PCFAuth fetchToken].accessToken;
     }];
     
-    [PCFData registerTokenProviderWithUserPromptBlock:^() {
-        PCFAuthResponse *response = [PCFAuth fetchTokenWithUserPrompt];
-        return response.accessToken;
+    [PCFData registerTokenInvalidatorBlock:^() {
+        [PCFAuth invalidateToken];
     }];
     
     return YES;

@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/PCFAuth.h</key>
 		<data>
-		LgRfVGh5i2uKS44rnEITRDaunwg=
+		PKmZErG4rg81rxNyz4554WjnpVc=
 		</data>
 		<key>Headers/PCFAuthClient.h</key>
 		<data>
-		7lKrfSzIeWMSHbdFl1ZtL65ImDg=
+		jvofpde16rrv3ar/56qfCaRVZOg=
 		</data>
 		<key>Headers/PCFAuthResponse.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/PCFLoginViewController.h</key>
 		<data>
-		CvagKrnUm1T5+wsgHJ1bUDF+bAk=
+		HsWGPtq7mFPRqrOrjZDYIHlCRcI=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -30,30 +30,30 @@
 		</data>
 		<key>PCFLoginViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		3RBzlSIfD5DwQ+PIYWJj9+auk1k=
+		jccnQHO4NvfEylWCt16tyWQxdyc=
 		</data>
 		<key>PCFLoginViewController~ipad.nib/runtime.nib</key>
 		<data>
-		PUSJjuD9uCoiQdL4Lunsrlkl9Ok=
+		15prtv9T6kC2TFTfCElTlgijtAM=
 		</data>
 		<key>PCFLoginViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		l8MFQJhbl+OLpbuP68xrye16iS8=
+		8fjJwkChgsdZva41h8Ob8ZLV3qo=
 		</data>
 		<key>PCFLoginViewController~iphone.nib/runtime.nib</key>
 		<data>
-		pXq/akzkVx4VjKjn4J9oXVHty1o=
+		As9je71qB/6Baa+w+nF9KWAr8es=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/PCFAuth.h</key>
 		<data>
-		LgRfVGh5i2uKS44rnEITRDaunwg=
+		PKmZErG4rg81rxNyz4554WjnpVc=
 		</data>
 		<key>Headers/PCFAuthClient.h</key>
 		<data>
-		7lKrfSzIeWMSHbdFl1ZtL65ImDg=
+		jvofpde16rrv3ar/56qfCaRVZOg=
 		</data>
 		<key>Headers/PCFAuthResponse.h</key>
 		<data>
@@ -61,7 +61,7 @@
 		</data>
 		<key>Headers/PCFLoginViewController.h</key>
 		<data>
-		CvagKrnUm1T5+wsgHJ1bUDF+bAk=
+		HsWGPtq7mFPRqrOrjZDYIHlCRcI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,19 +69,19 @@
 		</data>
 		<key>PCFLoginViewController~ipad.nib/objects-8.0+.nib</key>
 		<data>
-		3RBzlSIfD5DwQ+PIYWJj9+auk1k=
+		jccnQHO4NvfEylWCt16tyWQxdyc=
 		</data>
 		<key>PCFLoginViewController~ipad.nib/runtime.nib</key>
 		<data>
-		PUSJjuD9uCoiQdL4Lunsrlkl9Ok=
+		15prtv9T6kC2TFTfCElTlgijtAM=
 		</data>
 		<key>PCFLoginViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
-		l8MFQJhbl+OLpbuP68xrye16iS8=
+		8fjJwkChgsdZva41h8Ob8ZLV3qo=
 		</data>
 		<key>PCFLoginViewController~iphone.nib/runtime.nib</key>
 		<data>
-		pXq/akzkVx4VjKjn4J9oXVHty1o=
+		As9je71qB/6Baa+w+nF9KWAr8es=
 		</data>
 	</dict>
 	<key>rules</key>
