@@ -106,6 +106,9 @@
                                         <variation key="heightClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="180" y="312" width="240" height="328"/>
                                         </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Szv-3P-Wub"/>
+                                        </connections>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://localhost:3000/data/sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ia-Hw-aZ5">
                                         <rect key="frame" x="10" y="40" width="548" height="20"/>
