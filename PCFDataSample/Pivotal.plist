@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>pivotal.auth.tokenUrl</key>
-	<string>http://uaa.sherry.wine.cf-app.com/oauth/token</string>
+	<string>http://data-auth.sherry.wine.cf-app.com/token</string>
 	<key>pivotal.auth.authorizeUrl</key>
-	<string>http://uaa.sherry.wine.cf-app.com/oauth/authorize</string>
+	<string>http://data-auth.sherry.wine.cf-app.com/authorize</string>
 	<key>pivotal.auth.redirectUrl</key>
-	<string>io.pivotal.ios.PCFDataSample://oauth2callback</string>
+	<string>io.pivotal.ios.data://oauth2callback</string>
 	<key>pivotal.auth.clientId</key>
 	<string>ios-client</string>
 	<key>pivotal.auth.clientSecret</key>
 	<string>006d0cea91f01a82cdc57afafbbc0d26c8328964029d5b5eae920e2fdc703169</string>
 	<key>pivotal.data.serviceUrl</key>
-	<string>http://data-backend.sherry.wine.cf-app.com/data/sample</string>
+	<string>http://data-backend-auth.sherry.wine.cf-app.com/data/sample</string>
 	<key>pivotal.data.collisionStrategy</key>
 	<string>OptimisticLocking</string>
 </dict>
