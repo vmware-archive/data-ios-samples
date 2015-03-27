@@ -33,13 +33,21 @@ typedef void (^PCFTokenInvalidatorBlock) ();
 
 + (void)registerTokenProviderBlock:(PCFTokenProviderBlock)block;
 
++ (void)unregisterTokenProviderBlock;
+
 + (void)registerTokenInvalidatorBlock:(PCFTokenInvalidatorBlock)block;
 
++ (void)unregisterTokenInvalidatorBlock;
+
 + (void)registerNetworkObserverBlock:(PCFNetworkBlock)block;
+
++ (void)unregisterNetworkObserverBlock;
 
 + (void)performSync;
 
 + (void)performSyncWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+
++ (void)clearCachedData;
 
 + (void)logLevel:(PCFDataLogLevel)level;
 

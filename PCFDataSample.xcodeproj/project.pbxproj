@@ -14,10 +14,10 @@
 		E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0001A28E44600EFC209 /* Images.xcassets */; };
 		E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0021A28E44600EFC209 /* LaunchScreen.xib */; };
 		E12CD0101A28E44600EFC209 /* PCFDataSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */; };
-		E15EBDFB1AA65E660008A69D /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15EBDF91AA65E4F0008A69D /* PCFAuth.framework */; };
-		E15EBDFC1AA65E660008A69D /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E15EBDF91AA65E4F0008A69D /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E1B7364F1A9B7D7900A0B5CA /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B7364D1A9B7D7200A0B5CA /* PCFData.framework */; };
-		E1B736501A9B7D7900A0B5CA /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1B7364D1A9B7D7200A0B5CA /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E169D3A91AC2186F00E1A597 /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3A71AC2186800E1A597 /* PCFAuth.framework */; };
+		E169D3AA1AC2186F00E1A597 /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3A71AC2186800E1A597 /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E169D3AF1AC21AE700E1A597 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3AD1AC21AD500E1A597 /* PCFData.framework */; };
+		E169D3B01AC21AE700E1A597 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3AD1AC21AD500E1A597 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1B736541A9B87E400A0B5CA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B736521A9B87E400A0B5CA /* LoginViewController.m */; };
 		E1B736551A9B87E400A0B5CA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B736531A9B87E400A0B5CA /* LoginViewController.xib */; };
 		E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3DBE1A704F1000057671 /* Main.storyboard */; };
@@ -41,8 +41,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E15EBDFC1AA65E660008A69D /* PCFAuth.framework in Embed Frameworks */,
-				E1B736501A9B7D7900A0B5CA /* PCFData.framework in Embed Frameworks */,
+				E169D3B01AC21AE700E1A597 /* PCFData.framework in Embed Frameworks */,
+				E169D3AA1AC2186F00E1A597 /* PCFAuth.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,8 +63,8 @@
 		E12CD0091A28E44600EFC209 /* PCFDataSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCFDataSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CD00E1A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCFDataSampleTests.m; sourceTree = "<group>"; };
-		E15EBDF91AA65E4F0008A69D /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
-		E1B7364D1A9B7D7200A0B5CA /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
+		E169D3A71AC2186800E1A597 /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
+		E169D3AD1AC21AD500E1A597 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
 		E1B736511A9B87E400A0B5CA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E1B736521A9B87E400A0B5CA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E1B736531A9B87E400A0B5CA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15EBDFB1AA65E660008A69D /* PCFAuth.framework in Frameworks */,
-				E1B7364F1A9B7D7900A0B5CA /* PCFData.framework in Frameworks */,
+				E169D3AF1AC21AE700E1A597 /* PCFData.framework in Frameworks */,
+				E169D3A91AC2186F00E1A597 /* PCFAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +96,8 @@
 		E12CCFE71A28E44600EFC209 = {
 			isa = PBXGroup;
 			children = (
-				E15EBDF91AA65E4F0008A69D /* PCFAuth.framework */,
-				E1B7364D1A9B7D7200A0B5CA /* PCFData.framework */,
+				E169D3AD1AC21AD500E1A597 /* PCFData.framework */,
+				E169D3A71AC2186800E1A597 /* PCFAuth.framework */,
 				E12CCFF21A28E44600EFC209 /* PCFDataSample */,
 				E12CD00C1A28E44600EFC209 /* PCFDataSampleTests */,
 				E12CCFF11A28E44600EFC209 /* Products */,
@@ -210,7 +210,7 @@
 				TargetAttributes = {
 					E12CCFEF1A28E44600EFC209 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = DB2ELL349P;
+						DevelopmentTeam = BVZYXK966R;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -324,8 +324,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pivotal Labs, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pivotal Labs, Inc.";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -345,7 +345,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "fc6c187c-64b8-436a-8fa6-b19133ee6ec9";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -369,8 +369,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pivotal Labs, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pivotal Labs, Inc.";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -383,7 +383,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "fc6c187c-64b8-436a-8fa6-b19133ee6ec9";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -395,8 +395,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pivotal Labs, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pivotal Labs, Inc.";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -416,7 +416,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fc6c187c-64b8-436a-8fa6-b19133ee6ec9";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -426,8 +426,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pivotal Labs, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pivotal Labs, Inc.";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -447,7 +447,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fc6c187c-64b8-436a-8fa6-b19133ee6ec9";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};

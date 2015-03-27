@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
+static NSString* const PCFRequestCacheKey = @"RequestCache";
 
 static NSString* const PCFCollection = @"objects";
 static NSString* const PCFKey = @"key";
@@ -37,14 +37,14 @@ static NSString* const PCFKey = @"key";
     [super viewWillAppear:animated];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults addObserver:self forKeyPath:PCFDataRequestCache options:NSKeyValueObservingOptionNew context:0];
+    [defaults addObserver:self forKeyPath:PCFRequestCacheKey options:NSKeyValueObservingOptionNew context:0];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults removeObserver:self forKeyPath:PCFDataRequestCache];
+    [defaults removeObserver:self forKeyPath:PCFRequestCacheKey];
 }
 
 - (void)valueChanged:(id)sender {
@@ -53,17 +53,17 @@ static NSString* const PCFKey = @"key";
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([object isKindOfClass:[NSUserDefaults class]]) {
-        if ([keyPath isEqualToString:PCFDataRequestCache]) {
+        if ([keyPath isEqualToString:PCFRequestCacheKey]) {
             [self updateCachedContent:object];
         }
     }
 }
 
 - (void)updateCachedContent:(id)object {
-    NSString *content = [object objectForKey:PCFDataRequestCache];
+    NSString *content = [object objectForKey:PCFRequestCacheKey];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"%@ changed.", PCFDataRequestCache);
+        NSLog(@"%@ changed.", PCFRequestCacheKey);
         
         self.cachedContent.text = content;
     });
@@ -88,7 +88,7 @@ static NSString* const PCFKey = @"key";
 }
 
 - (IBAction)logout:(id)sender {
-    [PCFAuth invalidateToken];
+    [PCFAuth logout];
 }
 
 - (BOOL)force {
