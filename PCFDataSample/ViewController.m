@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+static NSString* const PCFDataRequestCache = @"PCFData:RequestCache";
 static NSString* const PCFRequestCacheKey = @"RequestCache";
 
 static NSString* const PCFCollection = @"objects";
@@ -60,7 +61,7 @@ static NSString* const PCFKey = @"key";
 }
 
 - (void)updateCachedContent:(id)object {
-    NSString *content = [object objectForKey:PCFRequestCacheKey];
+    NSString *content = [[object persistentDomainForName:PCFDataRequestCache] objectForKey:PCFRequestCacheKey];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"%@ changed.", PCFRequestCacheKey);
@@ -73,18 +74,24 @@ static NSString* const PCFKey = @"key";
     [self.object getWithCompletionBlock:^(PCFDataResponse *response) {
         [self handleResponse:response];
     }];
+    
+    [self.view endEditing:YES];
 }
 
 - (IBAction)saveObject:(id)sender {
     [self.object putWithValue:self.textField.text completionBlock:^(PCFDataResponse *response) {
         [self handleResponse:response];
     }];
+    
+    [self.view endEditing:YES];
 }
 
 - (IBAction)deleteObject:(id)sender {
     [self.object deleteWithCompletionBlock:^(PCFDataResponse *response) {
         [self handleResponse:response];
     }];
+    
+    [self.view endEditing:YES];
 }
 
 - (IBAction)logout:(id)sender {
