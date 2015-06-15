@@ -52,7 +52,7 @@
 /* Begin PBXFileReference section */
 		E11765AD1A36419700EF6B01 /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pivotal.plist; sourceTree = "<group>"; };
 		E12CCFF01A28E44600EFC209 /* PCFDataSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCFDataSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E12CCFF41A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12CCFF41A28E44600EFC209 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		E12CCFF51A28E44600EFC209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E12CCFF71A28E44600EFC209 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E12CCFF81A28E44600EFC209 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E11765AD1A36419700EF6B01 /* Pivotal.plist */,
-				E12CCFF41A28E44600EFC209 /* Info.plist */,
+				E12CCFF41A28E44600EFC209 /* info.plist */,
 				E1DA3DD91A71646500057671 /* Config.h */,
 				E1DA3DDA1A71646500057671 /* Config.m */,
 				E12CCFF51A28E44600EFC209 /* main.m */,
