@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0BF45071B31BD2F00C8F4C9 /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BF45051B31BD2500C8F4C9 /* PCFAuth.framework */; };
+		E0BF45081B31BD2F00C8F4C9 /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0BF45051B31BD2500C8F4C9 /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0BF45091B31BD3300C8F4C9 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BF45031B31BD1D00C8F4C9 /* PCFData.framework */; };
+		E0BF450A1B31BD3300C8F4C9 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0BF45031B31BD1D00C8F4C9 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E11765AE1A36419700EF6B01 /* Pivotal.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11765AD1A36419700EF6B01 /* Pivotal.plist */; };
 		E12CCFF61A28E44600EFC209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF51A28E44600EFC209 /* main.m */; };
 		E12CCFF91A28E44600EFC209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CCFF81A28E44600EFC209 /* AppDelegate.m */; };
@@ -14,10 +18,6 @@
 		E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0001A28E44600EFC209 /* Images.xcassets */; };
 		E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12CD0021A28E44600EFC209 /* LaunchScreen.xib */; };
 		E12CD0101A28E44600EFC209 /* PCFDataSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */; };
-		E169D3A91AC2186F00E1A597 /* PCFAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3A71AC2186800E1A597 /* PCFAuth.framework */; };
-		E169D3AA1AC2186F00E1A597 /* PCFAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3A71AC2186800E1A597 /* PCFAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E169D3AF1AC21AE700E1A597 /* PCFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3AD1AC21AD500E1A597 /* PCFData.framework */; };
-		E169D3B01AC21AE700E1A597 /* PCFData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E169D3AD1AC21AD500E1A597 /* PCFData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1B736541A9B87E400A0B5CA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B736521A9B87E400A0B5CA /* LoginViewController.m */; };
 		E1B736551A9B87E400A0B5CA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B736531A9B87E400A0B5CA /* LoginViewController.xib */; };
 		E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3DBE1A704F1000057671 /* Main.storyboard */; };
@@ -41,8 +41,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E169D3B01AC21AE700E1A597 /* PCFData.framework in Embed Frameworks */,
-				E169D3AA1AC2186F00E1A597 /* PCFAuth.framework in Embed Frameworks */,
+				E0BF450A1B31BD3300C8F4C9 /* PCFData.framework in Embed Frameworks */,
+				E0BF45081B31BD2F00C8F4C9 /* PCFAuth.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E0BF45031B31BD1D00C8F4C9 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
+		E0BF45051B31BD2500C8F4C9 /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
 		E11765AD1A36419700EF6B01 /* Pivotal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pivotal.plist; sourceTree = "<group>"; };
 		E12CCFF01A28E44600EFC209 /* PCFDataSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCFDataSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CCFF41A28E44600EFC209 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
@@ -63,8 +65,6 @@
 		E12CD0091A28E44600EFC209 /* PCFDataSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCFDataSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12CD00E1A28E44600EFC209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CD00F1A28E44600EFC209 /* PCFDataSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCFDataSampleTests.m; sourceTree = "<group>"; };
-		E169D3A71AC2186800E1A597 /* PCFAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFAuth.framework; sourceTree = "<group>"; };
-		E169D3AD1AC21AD500E1A597 /* PCFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PCFData.framework; sourceTree = "<group>"; };
 		E1B736511A9B87E400A0B5CA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E1B736521A9B87E400A0B5CA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E1B736531A9B87E400A0B5CA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E169D3AF1AC21AE700E1A597 /* PCFData.framework in Frameworks */,
-				E169D3A91AC2186F00E1A597 /* PCFAuth.framework in Frameworks */,
+				E0BF45091B31BD3300C8F4C9 /* PCFData.framework in Frameworks */,
+				E0BF45071B31BD2F00C8F4C9 /* PCFAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +96,8 @@
 		E0BF44F91B2B7CE800C8F4C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E169D3AD1AC21AD500E1A597 /* PCFData.framework */,
-				E169D3A71AC2186800E1A597 /* PCFAuth.framework */,
+				E0BF45051B31BD2500C8F4C9 /* PCFAuth.framework */,
+				E0BF45031B31BD1D00C8F4C9 /* PCFData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
