@@ -1,19 +1,15 @@
-Pivotal Mobile Services Suite Data SDK Sample for iOS
-=====================================================
-
-The Data SDK requires iOS 6.0 or greater.
-
-Data SDK Usage
---------------
-
-For more information please visit the [docs site](https://github.com/cfmobile/docs-datasync-ios)
+# PCF Mobile Services Data Client SDK Samples for iOS
 
 
-Sample Application
-------------------
+## Data SDK Usage
 
-There is a small sample application included in this repository to demonstrate and exercise the features in the Data Client SDK.
+For more information please visit the [docs site](http://docs.pivotal.io/mobile/data/ios/).
 
-You can use this sample application to test authorization using an OpenID Connect enabled identity server and the Pivotal Mobile Services Suite back-end server for data storage. You are able to define an MSSDataObject name and id and store and retrieve key-value data to the backend server for a given user.
 
-Watch the log output in the sample application's display to see what the Data library is doing in the background. This log output should also be visible in the iOS device console (for debug builds), but the sample application registers a "listener" with the Data Library's logger so it can show you what's going on.
+## Data Demo Application
+
+The Data Demo Application is an example of the simplest application possible that uses the PCF Mobile Services Data Client SDK.  At this time, it only demonstrates how to authenticate the user, and persist, retrieve and delete a value for a single key.
+
+You can specify your own environment details by editing the values in the sample project's `Pivotal.plist` resource file.
+
+Watch the log output in XCode's debug area to see what the Data SDK is doing in the background.  

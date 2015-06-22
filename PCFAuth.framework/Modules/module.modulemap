@@ -1,0 +1,6 @@
+framework module PCFAuth {
+  umbrella header "PCFAuth.h"
+
+  export *
+  module * { export * }
+}
