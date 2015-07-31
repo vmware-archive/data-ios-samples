@@ -22,6 +22,7 @@
 		E1B736551A9B87E400A0B5CA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B736531A9B87E400A0B5CA /* LoginViewController.xib */; };
 		E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3DBE1A704F1000057671 /* Main.storyboard */; };
 		E1DA3DDB1A71646500057671 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3DDA1A71646500057671 /* Config.m */; };
+		E5318F6D1B6BCC0700397F3F /* cert.der in Resources */ = {isa = PBXBuildFile; fileRef = E5318F6B1B6BCC0700397F3F /* cert.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E1DA3DBE1A704F1000057671 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E1DA3DD91A71646500057671 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		E1DA3DDA1A71646500057671 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		E5318F6B1B6BCC0700397F3F /* cert.der */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				E1DA3DD91A71646500057671 /* Config.h */,
 				E1DA3DDA1A71646500057671 /* Config.m */,
 				E12CCFF51A28E44600EFC209 /* main.m */,
+				E5318F6B1B6BCC0700397F3F /* cert.der */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				E1B736551A9B87E400A0B5CA /* LoginViewController.xib in Resources */,
 				E12CD0041A28E44600EFC209 /* LaunchScreen.xib in Resources */,
 				E11765AE1A36419700EF6B01 /* Pivotal.plist in Resources */,
+				E5318F6D1B6BCC0700397F3F /* cert.der in Resources */,
 				E12CD0011A28E44600EFC209 /* Images.xcassets in Resources */,
 				E1DA3DBF1A704F1000057671 /* Main.storyboard in Resources */,
 			);
