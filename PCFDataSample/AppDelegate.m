@@ -30,6 +30,10 @@
         [PCFData clearCachedData];
     }];
     
+    [PCFAuth logLevel:PCFAuthLogLevelDebug];
+
+    [PCFData logLevel:PCFDataLogLevelDebug];
+    
     return YES;
 }
 
